@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - FixerFinder</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>FixerFinder</h1>
+    <nav>
+      <a href="dashboard.html">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="profile.html">My Account</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="service-category">
+      <h2>Service Categories</h2>
+      <ul>
+        <li onclick="filterServices('Plumbing')">Plumbing</li>
+        <li onclick="filterServices('Electrical')">Electrical</li>
+        <li onclick="filterServices('Cleaning')">Cleaning</li>
+        <li onclick="filterServices('Landscaping')">Landscaping</li>
+        <li onclick="filterServices('Painting')">Painting</li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="welcome-message">
+        <h2>Welcome! User</h2>
+        <p>Explore the available services below.</p>
+        <input type="text" id="search-bar" placeholder="Search for services..." onkeyup="searchServices()">
+      </div>
+      <div class="product-list" id="product-list">
+        <div class="product-card" data-category="Plumbing">
+          <img src="service1.jpg" alt="Service 1">
+          <h3>Plumbing</h3>
+          <p>Expert plumbing services available.</p>
+        </div>
+        <div class="product-card" data-category="Electrical">
+          <img src="service2.jpg" alt="Service 2">
+          <h3>Electrical</h3>
+          <p>Professional electrical services.</p>
+        </div>
+        <div class="product-card" data-category="Cleaning">
+          <img src="service3.jpg" alt="Service 3">
+          <h3>Cleaning</h3>
+          <p>Reliable cleaning services.</p>
+        </div>
+        <div class="product-card" data-category="Landscaping">
+          <img src="service4.jpg" alt="Service 4">
+          <h3>Landscaping</h3>
+          <p>Top-notch landscaping services.</p>
+        </div>
+        <div class="product-card" data-category="Painting">
+          <img src="service5.jpg" alt="Service 5">
+          <h3>Painting</h3>
+          <p>Professional painting services.</p>
+        </div>
+        <!-- Add more product cards as needed -->
+      </div>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
